@@ -8,5 +8,6 @@ Also stay tuned for future updates, where we add other types of transformations 
 
 Replit link in case you wanna run it conveniently: https://replit.com/@blitcssh/reflections-calculator#README.md
 
+Any errors can be reported to my email at: 25benjaminli@gmail.com
 
 Credit: Ben
