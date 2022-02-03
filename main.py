@@ -49,6 +49,7 @@ elif slope == 0:
     difference = intercept - p.y
     linePoint = point(p.x, intercept + difference)
     print("(" + str(round((linePoint.x), rounder + 1)) + ", " + str(round((linePoint.y), rounder + 1)) + ")")
+
 else:
 
   perpSlope = -1 * float(1/slope)
@@ -57,7 +58,6 @@ else:
     # point slope it!
     newslope = perpSlope
     newintercept = float(newslope * p.x * -1) + p.y
-
     # make the ys equal to each other to find the midpoint
 
     xMid = float(1/((-1 * newslope) + slope - intercept)) * newintercept
