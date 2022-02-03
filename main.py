@@ -44,7 +44,11 @@ if (isUndef):
     linePoint = point(intercept + difference, p.y)
     print("(" + str(round((linePoint.x), 2)) + ", " + str(round((linePoint.y), 2)) + ")")
 
-
+elif slope == 0:
+  for p in points:
+    difference = intercept - p.y
+    linePoint = point(p.x, intercept + difference)
+    print("(" + str(round((linePoint.x), 2)) + ", " + str(round((linePoint.y), 2)) + ")")
 else:
 
   perpSlope = -1 * float(1/slope)
