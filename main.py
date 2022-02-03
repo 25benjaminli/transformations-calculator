@@ -18,7 +18,7 @@ class point():
 x = int(input("How many points are in the figure you want to reflect? "))
 slope = input("What is the slope? If it is undefined, type \"undef\": ")
 intercept = float(input("What is the y-intercept? If and only if the line doesn't have one, type the x intercept. "))
-
+rounder = int(input("How many decimal points do you want to round to? "))
 points = []
 
 isUndef = False
@@ -42,13 +42,13 @@ if (isUndef):
     # e.g. x = -3
     difference = intercept - p.x
     linePoint = point(intercept + difference, p.y)
-    print("(" + str(round((linePoint.x), 2)) + ", " + str(round((linePoint.y), 2)) + ")")
+    print("(" + str(round((linePoint.x), rounder + 1)) + ", " + str(round((linePoint.y), rounder + 1)) + ")")
 
 elif slope == 0:
   for p in points:
     difference = intercept - p.y
     linePoint = point(p.x, intercept + difference)
-    print("(" + str(round((linePoint.x), 2)) + ", " + str(round((linePoint.y), 2)) + ")")
+    print("(" + str(round((linePoint.x), rounder + 1)) + ", " + str(round((linePoint.y), rounder + 1)) + ")")
 else:
 
   perpSlope = -1 * float(1/slope)
@@ -68,6 +68,6 @@ else:
 
     wanted = point.findOtherWithMid(mid, p)
 
-    print("(" + str(round((wanted.x), 2)) + ", " + str(round((wanted.y), 2)) + ")")
+    print("(" + str(round((wanted.x), rounder + 1)) + ", " + str(round((wanted.y), rounder + 1)) + ")")
     # implement midpoint formula!
 
